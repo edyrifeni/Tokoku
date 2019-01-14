@@ -3,6 +3,7 @@ include_once('modules/jcart/jcart-edited.php');
 /* sessions */
 session_start();
 
+//memanggil module setting
 require_once("modules/setting.inc.php");
 ?>
 <!DOCTYPE html>
