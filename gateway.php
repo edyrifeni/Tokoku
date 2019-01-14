@@ -20,7 +20,7 @@ $cart =& $_SESSION['jcart']; if(!is_object($cart)) $cart = new jcart();
 if ($_POST['jcart_update_cart']  || $_POST['jcart_empty'])
    {
 
-   // UPDATE THE CART
+   // UPDATE THE CART ketika ditambah atau dikurangi dari beberapa transaksi
    if ($_POST['jcart_update_cart'])
       {
       $cart_updated = $cart->update_cart();
