@@ -11,6 +11,7 @@ $xaddress = $_GET ['xaddress'];
 
 $jcartdata = $_GET['jcartdata'];
 try {
+	//koneksi ke database dan binding database
 	$dbcon = new PDO("mysql:host=".$appxinfo['_db_host_'].";dbname=".$appxinfo['_db_name_']."","".$appxinfo['_db_user_']."","".$appxinfo['_db_pass_']."");
     $stmt = $dbcon->prepare("INSERT INTO orders(order_date,nama,email_address,phone,address) VALUES(CURDATE(),UCASE(:xname),:xmail,:xphone,:xaddress)");
 	$stmt->bindValue(':xname', $xname, PDO::PARAM_STR);
